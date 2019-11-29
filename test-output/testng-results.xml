@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="101" started-at="2019-11-29T15:13:38Z" finished-at="2019-11-29T15:13:39Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="101" started-at="2019-11-29T15:13:38Z" finished-at="2019-11-29T15:13:39Z">
+      <class name="com.qa.Rest.RestAssured">
+        <test-method status="PASS" signature="statusCode()[pri:1, instance:com.qa.Rest.RestAssured@5034c75a]" name="statusCode" duration-ms="2" started-at="2019-11-29T20:43:39Z" finished-at="2019-11-29T20:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- statusCode -->
+        <test-method status="PASS" signature="responseBody()[pri:2, instance:com.qa.Rest.RestAssured@5034c75a]" name="responseBody" duration-ms="2" started-at="2019-11-29T20:43:39Z" finished-at="2019-11-29T20:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- responseBody -->
+      </class> <!-- com.qa.Rest.RestAssured -->
+      <class name="com.qa.Web.Web">
+        <test-method status="PASS" signature="browserOpened()[pri:1, instance:com.qa.Web.Web@396a51ab]" name="browserOpened" duration-ms="2" started-at="2019-11-29T20:43:39Z" finished-at="2019-11-29T20:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserOpened -->
+        <test-method status="PASS" signature="applicationLaunched()[pri:2, instance:com.qa.Web.Web@396a51ab]" name="applicationLaunched" duration-ms="1" started-at="2019-11-29T20:43:39Z" finished-at="2019-11-29T20:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applicationLaunched -->
+      </class> <!-- com.qa.Web.Web -->
+      <class name="com.qa.Appium.Appium">
+        <test-method status="PASS" signature="nativeApplication()[pri:1, instance:com.qa.Appium.Appium@36d4b5c]" name="nativeApplication" duration-ms="17" started-at="2019-11-29T20:43:39Z" finished-at="2019-11-29T20:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nativeApplication -->
+        <test-method status="PASS" signature="hybridApplication()[pri:2, instance:com.qa.Appium.Appium@36d4b5c]" name="hybridApplication" duration-ms="2" started-at="2019-11-29T20:43:39Z" finished-at="2019-11-29T20:43:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hybridApplication -->
+      </class> <!-- com.qa.Appium.Appium -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

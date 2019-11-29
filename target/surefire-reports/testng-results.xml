@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Maven Surefire Plugin Suite" duration-ms="78" started-at="2019-11-29T21:07:10 IST" finished-at="2019-11-29T21:07:10 IST">
+    <groups>
+    </groups>
+    <test name="Maven Surefire Plugin Test" duration-ms="78" started-at="2019-11-29T21:07:10 IST" finished-at="2019-11-29T21:07:10 IST">
+      <class name="com.qa.Rest.RestAssured">
+        <test-method status="PASS" signature="statusCode()[pri:1, instance:com.qa.Rest.RestAssured@458ad742]" name="statusCode" duration-ms="0" started-at="2019-11-29T21:07:10 IST" finished-at="2019-11-29T21:07:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- statusCode -->
+        <test-method status="PASS" signature="responseBody()[pri:2, instance:com.qa.Rest.RestAssured@458ad742]" name="responseBody" duration-ms="1" started-at="2019-11-29T21:07:10 IST" finished-at="2019-11-29T21:07:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- responseBody -->
+      </class> <!-- com.qa.Rest.RestAssured -->
+      <class name="com.qa.Web.Web">
+        <test-method status="PASS" signature="browserOpened()[pri:1, instance:com.qa.Web.Web@5afa04c]" name="browserOpened" duration-ms="0" started-at="2019-11-29T21:07:10 IST" finished-at="2019-11-29T21:07:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserOpened -->
+        <test-method status="PASS" signature="applicationLaunched()[pri:2, instance:com.qa.Web.Web@5afa04c]" name="applicationLaunched" duration-ms="1" started-at="2019-11-29T21:07:10 IST" finished-at="2019-11-29T21:07:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applicationLaunched -->
+      </class> <!-- com.qa.Web.Web -->
+      <class name="com.qa.Appium.Appium">
+        <test-method status="PASS" signature="nativeApplication()[pri:1, instance:com.qa.Appium.Appium@2344fc66]" name="nativeApplication" duration-ms="11" started-at="2019-11-29T21:07:10 IST" finished-at="2019-11-29T21:07:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nativeApplication -->
+        <test-method status="PASS" signature="hybridApplication()[pri:2, instance:com.qa.Appium.Appium@2344fc66]" name="hybridApplication" duration-ms="0" started-at="2019-11-29T21:07:10 IST" finished-at="2019-11-29T21:07:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hybridApplication -->
+      </class> <!-- com.qa.Appium.Appium -->
+    </test> <!-- Maven Surefire Plugin Test -->
+  </suite> <!-- Maven Surefire Plugin Suite -->
+</testng-results>
