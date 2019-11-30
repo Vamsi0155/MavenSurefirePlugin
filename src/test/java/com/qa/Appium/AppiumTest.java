@@ -2,7 +2,7 @@ package com.qa.Appium;
 
 import org.testng.annotations.Test;
 
-public class Appium 
+public class AppiumTest 
 {
 	@Test(priority=1)
 	public void nativeApplication()

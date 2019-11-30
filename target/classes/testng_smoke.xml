@@ -3,9 +3,9 @@
 <suite name="Maven Surefire Plugin Suite">
 	<test name="Maven Surefire Plugin Test">
 		<classes>
-			<class name="com.qa.Appium.Appium" />
-			<class name="com.qa.Rest.RestAssured" />
-			<class name="com.qa.Web.Web" />
+			<class name="com.qa.Appium.AppiumTest" />
+			<class name="com.qa.Rest.RestAssuredTest" />
+			<class name="com.qa.Web.WebTest" />
 		</classes>
 	</test>
 </suite> 

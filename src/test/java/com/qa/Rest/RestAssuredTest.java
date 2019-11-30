@@ -2,7 +2,7 @@ package com.qa.Rest;
 
 import org.testng.annotations.Test;
 
-public class RestAssured 
+public class RestAssuredTest 
 {
 	@Test(priority=1)
 	public void statusCode()

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="0.02" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="0.031" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -64,10 +64,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="nativeApplication" classname="com.qa.Appium.Appium" time="0.011"/>
-  <testcase name="hybridApplication" classname="com.qa.Appium.Appium" time="0.001"/>
-  <testcase name="statusCode" classname="com.qa.Rest.RestAssured" time="0.006"/>
-  <testcase name="responseBody" classname="com.qa.Rest.RestAssured" time="0.001"/>
-  <testcase name="browserOpened" classname="com.qa.Web.Web" time="0"/>
-  <testcase name="applicationLaunched" classname="com.qa.Web.Web" time="0.001"/>
+  <testcase name="nativeApplication" classname="com.qa.Appium.AppiumTest" time="0.015"/>
+  <testcase name="hybridApplication" classname="com.qa.Appium.AppiumTest" time="0.016"/>
+  <testcase name="statusCode" classname="com.qa.Rest.RestAssuredTest" time="0"/>
+  <testcase name="responseBody" classname="com.qa.Rest.RestAssuredTest" time="0"/>
+  <testcase name="browserOpened" classname="com.qa.Web.WebTest" time="0"/>
+  <testcase name="applicationLaunched" classname="com.qa.Web.WebTest" time="0"/>
 </testsuite>

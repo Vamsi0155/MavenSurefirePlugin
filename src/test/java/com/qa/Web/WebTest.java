@@ -2,7 +2,7 @@ package com.qa.Web;
 
 import org.testng.annotations.Test;
 
-public class Web 
+public class WebTest 
 {
 	@Test(priority=1)
 	public void browserOpened()

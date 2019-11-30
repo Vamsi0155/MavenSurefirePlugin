@@ -1,3 +1,3 @@
-D:\Automation_Workspace\MavenSurefilePlugin\src\test\java\com\qa\Appium\Appium.java
-D:\Automation_Workspace\MavenSurefilePlugin\src\test\java\com\qa\Rest\RestAssured.java
-D:\Automation_Workspace\MavenSurefilePlugin\src\test\java\com\qa\Web\Web.java
+D:\Automation_Workspace\MavenSurefilePlugin\src\test\java\com\qa\Web\WebTest.java
+D:\Automation_Workspace\MavenSurefilePlugin\src\test\java\com\qa\Appium\AppiumTest.java
+D:\Automation_Workspace\MavenSurefilePlugin\src\test\java\com\qa\Rest\RestAssuredTest.java
