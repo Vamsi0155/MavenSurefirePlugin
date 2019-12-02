@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Maven Surefire Plugin Smoke Suite">
-	<test name="Maven Surefire Plugin Smoke Test">
+<suite name="Maven Surefire Plugin Regression Suite">
+	<test name="Maven Surefire Plugin Regression Test">
 		<classes>
 			<class name="com.qa.Web.WebTest"/>
 			<class name="com.qa.Rest.RestAssuredTest"/>
+			<class name="com.qa.Appium.AppiumTest"/>
 		</classes>
 	</test>
 </suite> 
