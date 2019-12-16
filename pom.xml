@@ -7,8 +7,8 @@
 	<name>Test</name>
 	<description>Test</description>
 
-	<!--Command to Run Smoke Profile - mvn test -PSmoke-->
-	<!--Command to Run Regression Profile - mvn test -PRegression-->
+	<!--Command to Run Smoke Profile - mvn test -PSmoke -->
+	<!--Command to Run Regression Profile - mvn test -PRegression -->
 	<profiles>
 		<profile>
 			<id>Smoke</id>
@@ -63,6 +63,12 @@
 			<artifactId>testng</artifactId>
 			<version>7.0.0</version>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
 		</dependency>
 
 	</dependencies>

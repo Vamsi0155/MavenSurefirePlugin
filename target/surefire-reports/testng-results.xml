@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Maven Surefire Plugin Regression Suite" duration-ms="78" started-at="2019-12-02T21:21:38 IST" finished-at="2019-12-02T21:21:39 IST">
+  <suite name="Maven Surefire Plugin Regression Suite" duration-ms="88" started-at="2019-12-11T22:33:13 IST" finished-at="2019-12-11T22:33:13 IST">
     <groups>
     </groups>
-    <test name="Maven Surefire Plugin Regression Test" duration-ms="78" started-at="2019-12-02T21:21:38 IST" finished-at="2019-12-02T21:21:39 IST">
+    <test name="Maven Surefire Plugin Regression Test" duration-ms="88" started-at="2019-12-11T22:33:13 IST" finished-at="2019-12-11T22:33:13 IST">
       <class name="com.qa.Rest.RestAssuredTest">
-        <test-method status="PASS" signature="statusCode()[pri:1, instance:com.qa.Rest.RestAssuredTest@458ad742]" name="statusCode" duration-ms="0" started-at="2019-12-02T21:21:39 IST" finished-at="2019-12-02T21:21:39 IST">
+        <test-method status="PASS" signature="statusCode()[pri:1, instance:com.qa.Rest.RestAssuredTest@458ad742]" name="statusCode" duration-ms="0" started-at="2019-12-11T22:33:13 IST" finished-at="2019-12-11T22:33:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- statusCode -->
-        <test-method status="PASS" signature="responseBody()[pri:2, instance:com.qa.Rest.RestAssuredTest@458ad742]" name="responseBody" duration-ms="0" started-at="2019-12-02T21:21:39 IST" finished-at="2019-12-02T21:21:39 IST">
+        <test-method status="PASS" signature="responseBody()[pri:2, instance:com.qa.Rest.RestAssuredTest@458ad742]" name="responseBody" duration-ms="1" started-at="2019-12-11T22:33:13 IST" finished-at="2019-12-11T22:33:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- responseBody -->
       </class> <!-- com.qa.Rest.RestAssuredTest -->
       <class name="com.qa.Appium.AppiumTest">
-        <test-method status="PASS" signature="nativeApplication()[pri:1, instance:com.qa.Appium.AppiumTest@5afa04c]" name="nativeApplication" duration-ms="0" started-at="2019-12-02T21:21:39 IST" finished-at="2019-12-02T21:21:39 IST">
+        <test-method status="PASS" signature="nativeApplication()[pri:1, instance:com.qa.Appium.AppiumTest@5afa04c]" name="nativeApplication" duration-ms="1" started-at="2019-12-11T22:33:13 IST" finished-at="2019-12-11T22:33:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nativeApplication -->
-        <test-method status="PASS" signature="hybridApplication()[pri:2, instance:com.qa.Appium.AppiumTest@5afa04c]" name="hybridApplication" duration-ms="0" started-at="2019-12-02T21:21:39 IST" finished-at="2019-12-02T21:21:39 IST">
+        <test-method status="PASS" signature="hybridApplication()[pri:2, instance:com.qa.Appium.AppiumTest@5afa04c]" name="hybridApplication" duration-ms="0" started-at="2019-12-11T22:33:13 IST" finished-at="2019-12-11T22:33:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hybridApplication -->
       </class> <!-- com.qa.Appium.AppiumTest -->
       <class name="com.qa.Web.WebTest">
-        <test-method status="PASS" signature="browserOpened()[pri:1, instance:com.qa.Web.WebTest@2344fc66]" name="browserOpened" duration-ms="15" started-at="2019-12-02T21:21:38 IST" finished-at="2019-12-02T21:21:39 IST">
+        <test-method status="PASS" signature="browserOpened()[pri:1, instance:com.qa.Web.WebTest@2344fc66]" name="browserOpened" duration-ms="12" started-at="2019-12-11T22:33:13 IST" finished-at="2019-12-11T22:33:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserOpened -->
-        <test-method status="PASS" signature="applicationLaunched()[pri:2, instance:com.qa.Web.WebTest@2344fc66]" name="applicationLaunched" duration-ms="0" started-at="2019-12-02T21:21:39 IST" finished-at="2019-12-02T21:21:39 IST">
+        <test-method status="PASS" signature="applicationLaunched()[pri:2, instance:com.qa.Web.WebTest@2344fc66]" name="applicationLaunched" duration-ms="1" started-at="2019-12-11T22:33:13 IST" finished-at="2019-12-11T22:33:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applicationLaunched -->
