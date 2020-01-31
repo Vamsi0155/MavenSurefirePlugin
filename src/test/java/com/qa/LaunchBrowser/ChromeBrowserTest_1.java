@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class ChromeBrowserTest_1 
 {
-	@Test(priority=1)
+	@Test
 	public void chromeBrowserTest_1() throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");

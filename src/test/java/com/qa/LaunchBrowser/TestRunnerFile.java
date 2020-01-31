@@ -13,7 +13,7 @@ public class TestRunnerFile
 		testng.setTestClasses(new Class[] {ChromeBrowserTest_1.class, ChromeBrowserTest_2.class});
 		testng.run();
 		
-		//Below Code is For ExtentReportListener
+		//Below Code is For ExtentReportListener.
 		//ExtentReportListener extentReportListener = new ExtentReportListener();
 		//testng.addListener(extentReportListener);
 	}
