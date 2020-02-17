@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Maven Surefire Plugin Regression Suite" duration-ms="75" started-at="2019-12-19T17:06:11Z" finished-at="2019-12-19T17:06:11Z">
+  <suite name="Maven Surefire Plugin Regression Suite" duration-ms="59850" started-at="2020-02-17T14:37:12Z" finished-at="2020-02-17T14:38:12Z">
     <groups>
     </groups>
-    <test name="Maven Surefire Plugin Regression Test" duration-ms="75" started-at="2019-12-19T17:06:11Z" finished-at="2019-12-19T17:06:11Z">
-      <class name="com.qa.Rest.RestAssuredTest">
-        <test-method status="PASS" signature="statusCode()[pri:1, instance:com.qa.Rest.RestAssuredTest@5034c75a]" name="statusCode" duration-ms="2" started-at="2019-12-19T22:36:11Z" finished-at="2019-12-19T22:36:11Z">
+    <test name="Maven Surefire Plugin Regression Test" duration-ms="59850" started-at="2020-02-17T14:37:12Z" finished-at="2020-02-17T14:38:12Z">
+      <class name="com.qa.ChromeTests.ChromeBrowserTest_2">
+        <test-method status="PASS" signature="chromeBrowserTest_2()[pri:0, instance:com.qa.ChromeTests.ChromeBrowserTest_2@58651fd0]" name="chromeBrowserTest_2" duration-ms="31498" started-at="2020-02-17T20:07:26Z" finished-at="2020-02-17T20:07:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- statusCode -->
-        <test-method status="PASS" signature="responseBody()[pri:2, instance:com.qa.Rest.RestAssuredTest@5034c75a]" name="responseBody" duration-ms="3" started-at="2019-12-19T22:36:11Z" finished-at="2019-12-19T22:36:11Z">
+        </test-method> <!-- chromeBrowserTest_2 -->
+      </class> <!-- com.qa.ChromeTests.ChromeBrowserTest_2 -->
+      <class name="com.qa.ChromeTests.ChromeBrowserTest_1">
+        <test-method status="PASS" signature="chromeBrowserTest_1()[pri:0, instance:com.qa.ChromeTests.ChromeBrowserTest_1@9629756]" name="chromeBrowserTest_1" duration-ms="14246" started-at="2020-02-17T20:07:12Z" finished-at="2020-02-17T20:07:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- responseBody -->
-      </class> <!-- com.qa.Rest.RestAssuredTest -->
-      <class name="com.qa.Appium.AppiumTest">
-        <test-method status="PASS" signature="nativeApplication()[pri:1, instance:com.qa.Appium.AppiumTest@396a51ab]" name="nativeApplication" duration-ms="2" started-at="2019-12-19T22:36:11Z" finished-at="2019-12-19T22:36:11Z">
+        </test-method> <!-- chromeBrowserTest_1 -->
+      </class> <!-- com.qa.ChromeTests.ChromeBrowserTest_1 -->
+      <class name="com.qa.ChromeTests.ChromeBrowserTest_3">
+        <test-method status="PASS" signature="chromeBrowserTest_3()[pri:0, instance:com.qa.ChromeTests.ChromeBrowserTest_3@4520ebad]" name="chromeBrowserTest_3" duration-ms="14018" started-at="2020-02-17T20:07:58Z" finished-at="2020-02-17T20:08:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- nativeApplication -->
-        <test-method status="PASS" signature="hybridApplication()[pri:2, instance:com.qa.Appium.AppiumTest@396a51ab]" name="hybridApplication" duration-ms="2" started-at="2019-12-19T22:36:11Z" finished-at="2019-12-19T22:36:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hybridApplication -->
-      </class> <!-- com.qa.Appium.AppiumTest -->
-      <class name="com.qa.Web.WebTest">
-        <test-method status="PASS" signature="browserOpened()[pri:1, instance:com.qa.Web.WebTest@36d4b5c]" name="browserOpened" duration-ms="20" started-at="2019-12-19T22:36:11Z" finished-at="2019-12-19T22:36:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserOpened -->
-        <test-method status="PASS" signature="applicationLaunched()[pri:2, instance:com.qa.Web.WebTest@36d4b5c]" name="applicationLaunched" duration-ms="3" started-at="2019-12-19T22:36:11Z" finished-at="2019-12-19T22:36:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- applicationLaunched -->
-      </class> <!-- com.qa.Web.WebTest -->
+        </test-method> <!-- chromeBrowserTest_3 -->
+      </class> <!-- com.qa.ChromeTests.ChromeBrowserTest_3 -->
     </test> <!-- Maven Surefire Plugin Regression Test -->
   </suite> <!-- Maven Surefire Plugin Regression Suite -->
 </testng-results>

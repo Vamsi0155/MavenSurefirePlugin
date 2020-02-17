@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Maven Surefire Plugin Smoke Suite]">
+  <test thread-count="5" verbose="0" name="Maven Surefire Plugin Smoke Test(failed)">
+    <classes>
+      <class name="com.qa.ChromeTests.ChromeBrowserTest_2">
+        <methods>
+          <include name="chromeBrowserTest_2"/>
+        </methods>
+      </class> <!-- com.qa.ChromeTests.ChromeBrowserTest_2 -->
+      <class name="com.qa.ChromeTests.ChromeBrowserTest_1">
+        <methods>
+          <include name="chromeBrowserTest_1"/>
+        </methods>
+      </class> <!-- com.qa.ChromeTests.ChromeBrowserTest_1 -->
+    </classes>
+  </test> <!-- Maven Surefire Plugin Smoke Test(failed) -->
+</suite> <!-- Failed suite [Maven Surefire Plugin Smoke Suite] -->

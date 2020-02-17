@@ -4,8 +4,8 @@
 
 	<test name="Maven Surefire Plugin Smoke Test">
 		<classes>
-			<class name="com.qa.Web.WebTest"/>
-			<class name="com.qa.Rest.RestAssuredTest"/>
+			<class name="com.qa.ChromeTests.ChromeBrowserTest_1"/>
+			<class name="com.qa.ChromeTests.ChromeBrowserTest_2"/>
 		</classes>
 	</test>
 </suite> 
