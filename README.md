@@ -13,9 +13,9 @@ To Execute Maven Project from Command Line Prompt, we need Maven Surefire Plugin
 
 #Maven Profile Concept
 
-In general, if we do not use Maven Profiling when in working with multiple testng.xml files. 
+In general, If we do not use Maven Profiling when in working with multiple testng.xml files. 
 Each time we need to go to pom.xml file and change the name of testng.xml file in Maven Surefire Plugin which needs to be executed and it is a very tedious task to do every time.
-so, it is a good practice to implement Maven Profile Concept when in working with multiple testng.xml files.
+So, It is a good practice to implement Maven Profile Concept when in working with multiple testng.xml files.
 
 [Multiple testng.xml files >> We maintain sanity_testng.xml, smoke_testng.xml, regresssion_testng.xml].
 
