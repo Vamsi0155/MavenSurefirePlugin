@@ -25,7 +25,7 @@ pipeline
 			steps
 			{
 				echo "Test Execution is Started"
-				bat "mvn test"
+				bat "mvn test -PRegression"
 				echo "Test Execution is Successful"
 			}
 		}
