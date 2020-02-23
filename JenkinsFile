@@ -29,12 +29,5 @@ pipeline
 				echo "Test Execution is Successful"
 			}
 		}
-		stage('Release')
-		{
-			steps
-			{
-				echo "Releasing of Code to Production is Successful"
-			}
-		}
 	}
 }
