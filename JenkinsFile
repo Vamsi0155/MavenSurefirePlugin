@@ -1,0 +1,40 @@
+pipeline
+{
+	agent any
+	stages
+	{
+		stage('Build')
+		{
+			steps
+			{
+				echo "Build is Started"
+				bat "mvn clean"
+				echo "Build is Successful"
+			}
+		}
+		stage('Deploy')
+		{
+			steps
+			{
+				echo "Deployment of Code is Started"
+				echo "Deployment of Code is Successful"
+			}
+		}
+		stage('Test')
+		{
+			steps
+			{
+				echo "Test Execution is Started"
+				bat "mvn test"
+				echo "Test Execution is Successful"
+			}
+		}
+		stage('Release')
+		{
+			steps
+			{
+				echo "Releasing of Code to Production is Successful"
+			}
+		}
+	}
+}
