@@ -22,7 +22,7 @@ pipeline
 		{
 			steps
 			{
-				sh mvn -PSmoke					
+				bat "mvn test -PSmoke"					
 			}
 		}
                 stage('Release')
