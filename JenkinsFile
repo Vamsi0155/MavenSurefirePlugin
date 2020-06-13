@@ -20,22 +20,28 @@ pipeline
 				echo "Deployment of Code is Successful"
 			}
 		}
-		stage('Smoke Test')
+		stage('Test')
 		{
-			steps
+			parallel
 			{
-				echo "Smoke Test Execution is Started"
-				bat "mvn test -PSmoke"
-				echo "Smoke Test Execution is Successful"
-			}
-		}
-		stage('Regression Test')
-		{
-			steps
-			{
-				echo "Regression Test Execution is Started"
-				bat "mvn test -PRegression"
-				echo "Regression Test Execution is Successful"
+				stage('Smoke Test')
+				{
+					steps
+					{
+						echo "Smoke Test Execution is Started"
+						bat "mvn test -PSmoke"
+						echo "Smoke Test Execution is Successful"
+					}
+				}
+				stage('Regression Test')
+				{
+					steps
+					{
+						echo "Regression Test Execution is Started"
+						bat "mvn test -PRegression"
+						echo "Regression Test Execution is Successful"
+					}
+				}
 			}
 		}
 		stage('Release')
