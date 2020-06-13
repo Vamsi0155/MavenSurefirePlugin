@@ -50,8 +50,9 @@ pipeline
 		{
 			steps
 			{
-				emailext body: 'The Job is Successful..!!',
-				subject: 'Jenkins Test Automation Pipeline',
+				emailext attachLog: true,
+				body: 'Test Automation Jenkins Notification..!',
+				subject: 'Hey, This Mail is for your from Jenkins',
 				to: 'Pavankrishnan1993@gmail.com'
 			}
 		}
