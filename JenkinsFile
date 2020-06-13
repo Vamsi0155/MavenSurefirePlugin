@@ -22,11 +22,26 @@ pipeline
 		}
 		stage('Test')
 		{
-			steps
+			parellel
 			{
-				echo "Test Execution is Started"
-				bat "mvn test -PRegression"
-				echo "Test Execution is Successful"
+				stage('Smoke')
+				{
+					steps
+					{
+						echo "Smoke Test Execution is Started"
+						sh mvn -PSmoke
+						echo "Smoke Test Execution is Successful"
+					}
+				}
+				stage('Regression')
+				{
+					steps
+					{
+						echo "Regression Test Execution is Started"
+						sh mvn -PRegression
+						echo "Regression Test Execution is Successful"
+					}
+				}
 			}
 		}
 	}
