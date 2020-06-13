@@ -7,9 +7,7 @@ pipeline
 		{
 			steps
 			{
-				echo "Build is Started"
-				bat "mvn clean"
-				echo "Build is Successful"
+				sh mvn clean
 			}
 		}
 		stage('Deploy')
@@ -20,34 +18,22 @@ pipeline
 				echo "Deployment of Code is Successful"
 			}
 		}
-		stage('Test')
+		stage('Tests')
 		{
-			parellel
+			steps
 			{
-				stage('Smoke')
-				{
-					steps
-					{
-						echo "Smoke Test Execution is Started"
-						sh mvn -PSmoke
-						echo "Smoke Test Execution is Successful"
-					}
-				}
-				stage('Regression')
-				{
-					steps
-					{
-						echo "Regression Test Execution is Started"
-						sh mvn -PRegression
-						echo "Regression Test Execution is Successful"
-					}
-				}
+				sh mvn -PSmoke					
+			}
+			steps
+			{
+				sh mvn -PRegression
 			}
 		}
                 stage('Release')
 		{
 			steps
 			{
+				echo "Release is Started"
 				echo "Release is Successful"
 			}
 		}
