@@ -47,4 +47,19 @@ pipeline
 			}
 		}
 	}
+	post
+	{
+		success 
+		{
+            		emailext body: 'The Job is Successful..!!',
+			subject: 'Jenkins Test Automation Pipeline',
+			to: 'Pavankrishnan1993@gmail.com'
+        	}
+        	failure 
+		{
+            		emailext body: 'The Job is Failed..!!',
+			subject: 'Jenkins Test Automation Pipeline',
+			to: 'Pavankrishnan1993@gmail.com'
+        	}
+	}
 }
