@@ -18,15 +18,11 @@ pipeline
 				echo "Deployment of Code is Successful"
 			}
 		}
-		stage('Tests')
+		stage('Test')
 		{
 			steps
 			{
 				sh mvn -PSmoke					
-			}
-			steps
-			{
-				sh mvn -PRegression
 			}
 		}
                 stage('Release')
