@@ -25,7 +25,7 @@ pipeline
 			steps
 			{
 				echo "Smoke Test Execution is Started"
-				bat "mvn test -PRegression"
+				bat "mvn test -PSmoke"
 				echo "Smoke Test Execution is Successful"
 			}
 		}
