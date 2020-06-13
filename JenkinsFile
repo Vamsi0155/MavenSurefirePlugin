@@ -46,20 +46,25 @@ pipeline
 				echo "Release is Successful"
 			}
 		}
+		stage('Email Notification')
+		{
+			steps
+			{
+				emailext body: 'The Job is Successful..!!',
+				subject: 'Jenkins Test Automation Pipeline',
+				to: 'Pavankrishnan1993@gmail.com'
+			}
+		}
 	}
 	post
 	{
 		success 
 		{
-            		emailext body: 'The Job is Successful..!!',
-			subject: 'Jenkins Test Automation Pipeline',
-			to: 'Pavankrishnan1993@gmail.com'
+            		echo "The Job is Successful"
         	}
         	failure 
 		{
-            		emailext body: 'The Job is Failed..!!',
-			subject: 'Jenkins Test Automation Pipeline',
-			to: 'Pavankrishnan1993@gmail.com'
+            		echo "The Job is Failed"
         	}
 	}
 }
