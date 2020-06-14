@@ -58,7 +58,7 @@ pipeline
 			{
 				slackSend channel: 'test-automation',
 				color: 'good',
-				message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} Build ${env.BUILD_NUMBER}\n More Information at: ${env.BUILD_URL}"
+				message: "*${currentBuild.currentResult}:* Job: ${env.JOB_NAME} | Build: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
 			}
 		}
 	}
