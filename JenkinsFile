@@ -48,9 +48,8 @@ pipeline
 		{
 			steps
 			{
-				slackSend(channel: 'test-automation', 
-				message: "Smoke and Regression Test Suites are executed Successfully..!! 
-				'${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+				slackSend channel: 'test-automation',
+				message: 'Smoke and Regression Test Suites are executed Successfully from Declarative Pipeline..!!'
 			}
 		}
 		stage('Release')
