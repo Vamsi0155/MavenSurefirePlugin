@@ -20,7 +20,7 @@ pipeline
 				echo "Deployment of Code is Successful"
 			}
 		}
-		stage('Test')
+		stage('Test - QA')
 		{
 			parallel
 			{
@@ -44,22 +44,21 @@ pipeline
 				}
 			}
 		}
+		stage('Slack Notification')
+		{
+			steps
+			{
+				echo "Test Suites are successfully executed in QA Environment"
+				slackSend channel: 'test-automation',
+				message: 'Smoke and Regression Test Suites are executed Successfully..!!'
+			}
+		}
 		stage('Release')
 		{
 			steps
 			{
 				echo "Release is Started"
 				echo "Release is Successful"
-			}
-		}
-		stage('Email Notification')
-		{
-			steps
-			{
-				emailext attachLog: true,
-				body: 'Test Automation Jenkins Notification..!',
-				subject: 'Hey, This Mail is for your from Jenkins',
-				to: 'Pavankrishnan1993@gmail.com'
 			}
 		}
 	}
