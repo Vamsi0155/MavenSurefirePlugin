@@ -49,7 +49,9 @@ pipeline
 			steps
 			{
 				slackSend channel: 'test-automation',
-				message: 'Smoke and Regression Test Suites are executed Successfully from Declarative Pipeline..!!'
+				color: 'good',
+				message: 'Smoke and Regression Test Suites are executed Successfully from Declarative Pipeline..!!',
+				username: 'Pavan Kumar K J'
 			}
 		}
 		stage('Release')
