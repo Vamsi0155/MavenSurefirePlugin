@@ -44,22 +44,21 @@ pipeline
 				}
 			}
 		}
-		stage('Slack Notification')
-		{
-			steps
-			{
-				slackSend channel: 'test-automation',
-				color: 'good',
-				message: 'Smoke and Regression Test Suites are executed Successfully from Declarative Pipeline..!!',
-				username: 'Pavan Kumar K J'
-			}
-		}
 		stage('Release')
 		{
 			steps
 			{
 				echo "Release is Started"
 				echo "Release is Successful"
+			}
+		}
+		stage('Slack Notification')
+		{
+			steps
+			{
+				slackSend channel: 'test-automation',
+				color: 'good',
+				message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}"
 			}
 		}
 	}
