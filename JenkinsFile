@@ -58,10 +58,9 @@ pipeline
 			{
 				slackSend channel: 'test-automation',
 				color: 'good',
-				message: 'Smoke and Regression Test Suites are executed Successfully from Declarative Pipeline..!!',
 				message: "*${currentBuild.currentResult}:* 
 				Job ${env.JOB_NAME} 
-				build ${env.BUILD_NUMBER}\n 
+				Build ${env.BUILD_NUMBER}\n 
 				More Information at: ${env.BUILD_URL}"
 			}
 		}
