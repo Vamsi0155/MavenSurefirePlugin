@@ -76,7 +76,7 @@ pipeline
 				{
 					steps
 					{
-						emailext body: 'Job Passed..!!', subject: 'Jenkins', to: 'Pavankrishnan1993@gmail.com''
+						emailext body: 'Job Passed..!!', subject: 'Jenkins', to: 'Pavankrishnan1993@gmail.com'
 					}
 				}
 			}
