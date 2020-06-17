@@ -25,7 +25,7 @@ public static WebDriver driver;
 		driver.get("https://www.facebook.com");
 		
 		String title = driver.getTitle();
-		System.out.println("The BrowserTest_1 Title is ::: " +title);
+		System.out.println("The BrowserTest_3 Title is ::: " +title);
 		Assert.assertEquals(title, "Facebook – log in or sign up");
 		
 		driver.quit();
