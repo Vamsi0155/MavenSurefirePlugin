@@ -4,9 +4,9 @@
 	
 	<test name="Maven Surefire Plugin Regression Test">
 		<classes>
-			<class name="com.qa.ChromeTests.ChromeBrowserTest_1"/>
-			<class name="com.qa.ChromeTests.ChromeBrowserTest_2"/>
-			<class name="com.qa.ChromeTests.ChromeBrowserTest_3"/>
+			<class name="com.qa.Tests.BrowserTest_1"/>
+			<class name="com.qa.Tests.BrowserTest_2"/>
+			<class name="com.qa.Tests.BrowserTest_3"/>
 		</classes>
 	</test>
 </suite> 

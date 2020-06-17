@@ -1,4 +1,4 @@
-package com.qa.ChromeTests;
+package com.qa.Tests;
 
 import java.util.concurrent.TimeUnit;
 
