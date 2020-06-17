@@ -4,14 +4,15 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ChromeBrowserTest_1 
+public class BrowserTest_1 
 {
 public static WebDriver driver;
 	
 	@Test
-	public void chromeBrowserTest_1() throws InterruptedException
+	public void browserTest_1() throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
@@ -24,7 +25,9 @@ public static WebDriver driver;
 		driver.get("https://www.facebook.com");
 		
 		String title = driver.getTitle();
-		System.out.println("The ChromeBrowserTest_1 Title is ::: " +title);
+		System.out.println("The BrowserTest_1 Title is ::: " +title);
+		
+		Assert.assertEquals(title, "Facebook");
 		
 		driver.quit();
 	}
