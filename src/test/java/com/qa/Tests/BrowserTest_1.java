@@ -26,8 +26,7 @@ public static WebDriver driver;
 		
 		String title = driver.getTitle();
 		System.out.println("The BrowserTest_1 Title is ::: " +title);
-		
-		Assert.assertEquals(title, "Facebook");
+		Assert.assertEquals(title, "Facebook – log in or sign up");
 		
 		driver.quit();
 	}

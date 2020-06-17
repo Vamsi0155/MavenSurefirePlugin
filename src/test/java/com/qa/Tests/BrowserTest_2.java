@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BrowserTest_2 
@@ -25,6 +26,7 @@ public static WebDriver driver;
 		
 		String title = driver.getTitle();
 		System.out.println("The BrowserTest_2 Title is ::: " +title);
+		Assert.assertEquals(title, "Facebook – log in or sign up");
 		
 		driver.quit();
 	}
