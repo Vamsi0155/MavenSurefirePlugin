@@ -31,15 +31,6 @@ pipeline
 		{
 			parallel
 			{
-				stage('Regression Suite')
-				{
-					steps
-					{
-						echo "Regression Test Execution is Started"
-						bat "mvn test -PRegression"
-						echo "Regression Test Execution is Successful"
-					}
-				}
 				stage('Smoke Suite')
 				{
 					steps
@@ -47,6 +38,15 @@ pipeline
 						echo "Smoke Test Execution is Started"
 						bat "mvn test -PSmoke"
 						echo "Smoke Test Execution is Successful"
+					}
+				}
+				stage('Regression Suite')
+				{
+					steps
+					{
+						echo "Regression Test Execution is Started"
+						bat "mvn test -PRegression"
+						echo "Regression Test Execution is Successful"
 					}
 				}
 			}
@@ -63,6 +63,15 @@ pipeline
 		{
 			parallel
 			{
+				stage('Slack')
+				{
+					steps
+					{
+						slackSend channel: 'test-automation',
+						color: 'good',
+						message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
+					}
+				}
 				stage('Gmail')
 				{
 					steps
@@ -71,15 +80,6 @@ pipeline
 						${env.BUILD_URL}
 						This Job is Completed..!!''', 
 						subject: '${env.JOB_NAME}', to: 'Pavankrishnan1993@gmail.com'
-					}
-				}
-				stage('Slack')
-				{
-					steps
-					{
-						slackSend channel: 'test-automation',
-						color: 'good',
-						message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
 					}
 				}
 			}
