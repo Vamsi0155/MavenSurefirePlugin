@@ -85,15 +85,4 @@ pipeline
 			}
 		}
 	}
-	post
-	{
-		success
-		{
-			The Job is Successful..!!
-		}
-		failure
-		{
-			The Job is Failed..!!
-		}
-	}
 }
