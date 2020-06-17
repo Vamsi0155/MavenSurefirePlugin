@@ -59,24 +59,41 @@ pipeline
 				echo "Release is Successful"
 			}
 		}
-		stage('Slack Notification')
+		stage('Notifications')
 		{
-			steps
+			parallel
 			{
-				slackSend channel: 'test-automation',
-				color: 'good',
-				message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
+				stage('Slack')
+				{
+					steps
+					{
+						slackSend channel: 'test-automation',
+						color: 'good',
+						message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
+					}
+				}
+				stage('Gmail')
+				{
+					steps
+					{
+						emailext body: '''Hi Team,
+						${env.BUILD_URL}
+						This Job is Completed..!!''', 
+						subject: '${env.JOB_NAME}', to: 'Pavankrishnan1993@gmail.com'
+					}
+				}
 			}
 		}
 	}
 	post
 	{
-		always
+		success
 		{
-			emailext body: '''Hi Team,
-			${env.BUILD_URL}
-			This Job is Completed..!!''', 
-			subject: '${env.JOB_NAME}', to: 'Pavankrishnan1993@gmail.com'
+			The Job is Successful..!!
+		}
+		failure
+		{
+			The Job is Failed..!!
 		}
 	}
 }
