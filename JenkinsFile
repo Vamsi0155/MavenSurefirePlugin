@@ -3,12 +3,19 @@ pipeline
 	agent any
 	stages
 	{
+		stage('Git Checkout')
+		{
+			steps
+			{
+				git 'https://github.com/PavanReddy77/MavenSurefirePlugin.git'
+			}
+		}
 		stage('Build')
 		{
 			steps
 			{
 				echo "Build is Started"
-				bat "mvn clean"
+				bat "mvn clean package"
 				echo "Build is Successful"
 			}
 		}
