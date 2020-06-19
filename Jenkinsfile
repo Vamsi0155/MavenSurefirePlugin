@@ -10,7 +10,7 @@ pipeline
 				git 'https://github.com/PavanReddy77/MavenSurefirePlugin.git'
 			}
 		}
-		stage('SonarQube Code Analysis')
+		stage('Code Analysis')
 		{
 			steps
 			{
