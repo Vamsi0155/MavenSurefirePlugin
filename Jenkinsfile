@@ -10,6 +10,15 @@ pipeline
 				git 'https://github.com/PavanReddy77/MavenSurefirePlugin.git'
 			}
 		}
+		stage('SonarQube Code Analysis')
+		{
+			steps
+			{
+				echo "SonarQube Test is Started"
+				bat 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dlicense.skip=true'
+				echo "SonarQube Test is Completed"
+			}
+		}
 		stage('Build')
 		{
 			steps
