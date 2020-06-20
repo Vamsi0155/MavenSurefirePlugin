@@ -95,13 +95,9 @@ pipeline
 	}
 	post
 	{
-        	success 
+		failure 
 		{
-           		 echo 'This Job has been Successfully Executed and Notifications have been sent to Slack and Gmail..!!'
-        	}
-        	unstable 
-		{
-           		echo 'This Job is Unstable - Notifications have been sent to Slack and Gmail..!!'
+            		echo 'This Job is Failed - Notifications have been sent to Slack and Gmail..!!'
 			
 			slackSend channel: 'test-automation',
 			color: 'good',
@@ -111,9 +107,9 @@ pipeline
 			subject: 'Declarative Pipeline Build Status',
 			to: 'Pavankrishnan1993@gmail.com'
 		}
-        	failure 
+        	unstable 
 		{
-            		echo 'This Job is Failed - Notifications have been sent to Slack and Gmail..!!'
+           		echo 'This Job is Unstable - Notifications have been sent to Slack and Gmail..!!'
 			
 			slackSend channel: 'test-automation',
 			color: 'good',
