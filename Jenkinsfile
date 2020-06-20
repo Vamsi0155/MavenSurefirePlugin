@@ -93,4 +93,35 @@ pipeline
 			}
 		}
 	}
+	post
+	{
+        	success 
+		{
+           		 echo 'This Job has been Successfully Executed and Notifications have been sent to Slack and Gmail..!!'
+        	}
+        	unstable 
+		{
+           		echo 'This Job is Unstable - Notifications have been sent to Slack and Gmail..!!'
+			
+			slackSend channel: 'test-automation',
+			color: 'good',
+			message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
+        		
+			emailext body: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}",
+			subject: 'Declarative Pipeline Build Status',
+			to: 'Pavankrishnan1993@gmail.com'
+		}
+        	failure 
+		{
+            		echo 'This Job is Failed - Notifications have been sent to Slack and Gmail..!!'
+			
+			slackSend channel: 'test-automation',
+			color: 'good',
+			message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
+        		
+			emailext body: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}",
+			subject: 'Declarative Pipeline Build Status',
+			to: 'Pavankrishnan1993@gmail.com'
+		}
+	}
 }
