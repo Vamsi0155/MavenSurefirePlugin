@@ -3,13 +3,6 @@ pipeline
 	agent any
 	stages
 	{
-		stage('Git Checkout')
-		{
-			steps
-			{
-				git 'https://github.com/PavanReddy77/MavenSurefirePlugin.git'
-			}
-		}
 		stage('SonarQube Analysis')
 		{
 			steps
@@ -68,6 +61,26 @@ pipeline
 				echo "Release is Successful"
 			}
 		}
+		stage('Publish Reports')
+		{
+			parallel
+			{
+				stage('Extent Report')
+				{
+					steps
+					{
+						echo "Extent Report is yet to be Implemented"
+					}
+				}
+				stage('Allure Report')
+				{
+					steps
+					{
+						echo "Allure Report is yet to be Implemented"
+					}
+				}
+			}
+		}
 		stage('Notifications')
 		{
 			parallel
@@ -86,7 +99,7 @@ pipeline
 					steps
 					{
 						emailext body: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}",
-						subject: 'Declarative Pipeline Build Status',
+						subject: 'BlueOcean Pipeline Build Status',
 						to: 'Pavankrishnan1993@gmail.com'
 					}
 				}
@@ -104,7 +117,7 @@ pipeline
 			message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
         		
 			emailext body: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}",
-			subject: 'Declarative Pipeline Build Status',
+			subject: 'BlueOcean Pipeline Build Status',
 			to: 'Pavankrishnan1993@gmail.com'
 		}
         	unstable 
@@ -116,7 +129,7 @@ pipeline
 			message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
         		
 			emailext body: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}",
-			subject: 'Declarative Pipeline Build Status',
+			subject: 'BlueOcean Pipeline Build Status',
 			to: 'Pavankrishnan1993@gmail.com'
 		}
 	}
