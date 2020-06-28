@@ -9,7 +9,7 @@ pipeline
 			{
 				echo "SonarQube Test is Started"
 				bat 'mvn sonar:sonar -Dsonar.projectName=MavenSurefirePlugin -Dsonar.host.url=http://localhost:9000 -Dlicense.skip=true'
-				echo "SonarQube Test is Completed"
+				echo "SonarQube Test is Successful"
 			}
 		}
 		stage('Build')
@@ -25,8 +25,8 @@ pipeline
 		{
 			steps
 			{
-				echo "Deployment of Code is Started"
-				echo "Deployment of Code is Successful"
+				echo "Deployment is Started"
+				echo "Deployment is Successful"
 			}
 		}
 		stage('Chrome Tests')
@@ -69,14 +69,14 @@ pipeline
 				{
 					steps
 					{
-						echo "Extent Report is yet to be Implemented"
+						echo "Extent Report is yet to be implemented"
 					}
 				}
 				stage('Allure Report')
 				{
 					steps
 					{
-						echo "Allure Report is yet to be Implemented"
+						echo "Allure Report is yet to be implemented"
 					}
 				}
 			}
