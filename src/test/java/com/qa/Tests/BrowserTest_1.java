@@ -10,7 +10,8 @@ import org.testng.annotations.Test;
 public class BrowserTest_1 
 {
 public static WebDriver driver;
-	
+
+	//Test
 	@Test
 	public void browserTest_1() throws InterruptedException
 	{
