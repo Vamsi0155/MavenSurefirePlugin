@@ -29,7 +29,7 @@ pipeline
 				echo "Deployment is Successful"
 			}
 		}
-		stage('Smoke Suite')
+		stage('Smoke Test Suite')
 		{
 			steps
 			{
@@ -38,7 +38,7 @@ pipeline
 				echo "Smoke Test Execution is Successful"
 			}
 		}
-		stage('Regression Suite')
+		stage('Regression Test Suite')
 		{
 			steps
 			{
