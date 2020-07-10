@@ -47,14 +47,6 @@ pipeline
 				echo "Regression Test Execution is Successful"
 			}
 		}
-		stage('Release')
-		{
-			steps
-			{
-				echo "Release is Started"
-				echo "Release is Successful"
-			}
-		}
 		stage('Publish Reports')
 		{
 			parallel
@@ -73,6 +65,14 @@ pipeline
 						echo "Allure Report is yet to be implemented"
 					}
 				}
+			}
+		}
+		stage('Release')
+		{
+			steps
+			{
+				echo "Release is Started"
+				echo "Release is Successful"
 			}
 		}
 		stage('Notifications')
