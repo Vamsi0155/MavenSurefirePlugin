@@ -29,7 +29,6 @@ pipeline
 				echo "Deployment is Successful"
 			}
 		}
-	
 		stage('Smoke Suite')
 		{
 			steps
