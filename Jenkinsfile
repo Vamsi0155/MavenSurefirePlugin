@@ -3,15 +3,6 @@ pipeline
 	agent any
 	stages
 	{
-		stage('SonarQube Analysis')
-		{
-			steps
-			{
-				echo "SonarQube Test is Started"
-				bat 'mvn sonar:sonar -Dsonar.projectName=MavenSurefirePlugin -Dsonar.host.url=http://localhost:9000 -Dlicense.skip=true'
-				echo "SonarQube Test is Successful"
-			}
-		}
 		stage('Build')
 		{
 			steps
@@ -19,6 +10,15 @@ pipeline
 				echo "Build is Started"
 				bat "mvn clean package"
 				echo "Build is Successful"
+			}
+		}
+		stage('SonarQube Analysis')
+		{
+			steps
+			{
+				echo "SonarQube Test is Started"
+				bat 'mvn sonar:sonar -Dsonar.projectName=MavenSurefirePlugin -Dsonar.host.url=http://localhost:9000 -Dlicense.skip=true'
+				echo "SonarQube Test is Successful"
 			}
 		}
 		stage('Deploy')
@@ -29,28 +29,23 @@ pipeline
 				echo "Deployment is Successful"
 			}
 		}
-		stage('Chrome Tests')
+	
+		stage('Smoke Suite')
 		{
-			parallel
+			steps
 			{
-				stage('Smoke Suite')
-				{
-					steps
-					{
-						echo "Smoke Test Execution is Started"
-						bat "mvn test -PSmoke"
-						echo "Smoke Test Execution is Successful"
-					}
-				}
-				stage('Regression Suite')
-				{
-					steps
-					{
-						echo "Regression Test Execution is Started"
-						bat "mvn test -PRegression"
-						echo "Regression Test Execution is Successful"
-					}
-				}
+				echo "Smoke Test Execution is Started"
+				bat "mvn test -PSmoke"
+				echo "Smoke Test Execution is Successful"
+			}
+		}
+		stage('Regression Suite')
+		{
+			steps
+			{
+				echo "Regression Test Execution is Started"
+				bat "mvn test -PRegression"
+				echo "Regression Test Execution is Successful"
 			}
 		}
 		stage('Release')
